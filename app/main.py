@@ -1,5 +1,10 @@
 from flask import Flask
+from flask import render_template
+from flask import request
+from flask import redirect
+
 app= Flask(__name__)
 @app.route('/')
 def index():
-  return "<h1>Welcome to CodingX</h1>"
+  books =[]
+  return render_template("home.html",lstbooks=books)
